@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+CORS Client
+
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("get", "http://localhost:8080/hello");
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+            alert(xhr.responseText);
+        }
+    };
+    xhr.send();
+</script>
+</body>
+</html>
